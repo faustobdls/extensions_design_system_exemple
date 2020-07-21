@@ -9,8 +9,7 @@ extension ModularNavigatorExtension on IModularNavigator {
   Future<dynamic> showDialogAdaptative(
       {String title,
       String content,
-      List<Widget> actions,
-      bool isLoading = false}) {
+      List<Widget> actions}) {
     var titleDialog = Text(
       title ?? "",
       style: TextStyle(
@@ -18,13 +17,11 @@ extension ModularNavigatorExtension on IModularNavigator {
         fontWeight: FontWeight.bold,
       ),
     );
-    var contentDialog = Center(
-      child: Text(
-        content ?? "",
-        style: TextStyle(
-          fontSize: 16,
-          fontWeight: FontWeight.w300,
-        ),
+    var contentDialog = Text(
+      content ?? "",
+      style: TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.w300,
       ),
     );
 

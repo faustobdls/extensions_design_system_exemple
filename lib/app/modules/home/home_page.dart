@@ -25,44 +25,74 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text("WELLCOME".i18n(lang: "es-mx")).h3(
+                  Text("NOW".i18n(lang: "pt-br")).h3(
                     style: TextStyle(
-                      fontSize: 70,
-                      color: Colors.pinkAccent,
+                      fontSize: 60,
+                      color: ColorsTheme.danger,
                     ),
                   ),
+
+
+
                   // Text("NOW".i18n(lang: "pt-br")).h3(
                   //   style: TextStyle(
-                  //     fontSize: 70,
+                  //     fontSize: 60,
                   //     color: Colors.pinkAccent,
                   //   ),
                   // ),
                   // Text("NOW".i18n(lang: "en-us")).h3(
                   //   style: TextStyle(
-                  //     fontSize: 70,
+                  //     fontSize: 60,
                   //     color: Colors.pinkAccent,
                   //   ),
                   // ),
                   // Text("NOW".i18n(lang: "es-mx")).h3(
                   //   style: TextStyle(
-                  //     fontSize: 70,
+                  //     fontSize: 60,
                   //     color: Colors.pinkAccent,
                   //   ),
                   // ),
                   // Text("I'm a standard h1 title").h1(),
-                  // Text("I'm a pink and size 50 h1 title").h1(
+                  // Text("I'm a pink and size 40 h1 title").h1(
                   //   style: TextStyle(
-                  //     fontSize: 50,
+                  //     fontSize: 40,
                   //     color: Colors.red,
                   //   ),
                   // ),
-                  Text("H1").h1(),
-                  Text("H2").h2(),
-                  Text("H3").h3(),
-                  Text("H4").h4(),
-                  Text("H5").h5(),
-                  Text("H6").h6(),
-                  Text("H7").h7(),
+
+
+
+
+                  // Text("H1").h1(),
+                  // Text("H2").h2(),
+                  // Text("H3").h3(),
+                  // Text("H4").h4(),
+                  // Text("H5").h5(),
+                  // Text("H6").h6(),
+                  // Text("H7").h7(),
+
+
+
+
+                  FlatButton(
+                    onPressed: () async {
+                      await Modular.to.showDialogAdaptative(
+                        title: "Aqui eu tenho um titulo",
+                        content: "Um conteudo",
+                        actions: <Widget>[
+                          FlatButton(
+                            child: Text("OK"),
+                            onPressed: Modular.to.pop,
+                          ),
+                        ],
+                      );
+                    },
+                    child: Text("ME APERTE").h3(),
+                  ),
+
+
+
+
                 ],
               ),
             ]),

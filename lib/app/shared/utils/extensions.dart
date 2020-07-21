@@ -12,7 +12,7 @@ class ColorsTheme{
   static const Color warningBG = const Color(0xFFFFFCF5);
   static const Color confirm = const Color(0xFF00CB77);
   static const Color confirmBG = const Color(0xFFEBFFF7);
-  static const Color danger = const Color(0xFFF91C16);
+  static const Color danger = const Color(0xFFFF1C16);
   static const Color dangerBG = const Color(0xFFFEECEB);
 
   static const MaterialColor shadesOfGray = const MaterialColor(
